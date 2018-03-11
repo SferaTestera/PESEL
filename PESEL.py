@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from random import randint
 
 
 def get_year():
@@ -56,6 +57,14 @@ def month_number(year, month):
 def day_number(day):
     return day
 
+def serial_number():
+    return randint(0, 999)
+
+def gender_number():
+    return randint(0, 9)
+
+def check_digit():
+
 
 year = get_year()
 month = get_month()
@@ -64,11 +73,17 @@ day = get_day()
 year_number = year_number(year)
 month_number = month_number(year, month)
 day_number = day_number(day)
+serial_number = serial_number()
+gender_number = gender_number()
 
 print year_number
 print month_number
 print day
+print serial_number
+print gender_number
+
+
 
 print("Rok: " + str(year) + " Miesiac: " + str(month) + " Dzien: " + str(day))
 
-print ("Numer PESEl: " + str(year_number) + str(month_number) + str(day_number))
+print ("Numer PESEl: " + str(year_number) + str(month_number) + str(day_number) + str(serial_number))
