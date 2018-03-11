@@ -70,7 +70,6 @@ year = get_year()
 month = get_month()
 day = get_day()
 
-
 year_number = year_number(year)
 month_number = month_number(year, month)
 day_number = day_number(day)
@@ -83,3 +82,5 @@ PESEL = str(year_number) + str(month_number) + str(day_number) + str(serial_numb
 print PESEL
 
 print("Rok: " + str(year) + " Miesiac: " + str(month) + " Dzien: " + str(day))
+
+print ("Numer PESEl: " + str(year_number) + str(month_number) + str(day_number) + str(serial_number))
