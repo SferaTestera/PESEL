@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from random import randint
 
 
 def get_year():
@@ -56,19 +57,29 @@ def month_number(year, month):
 def day_number(day):
     return day
 
+def serial_number():
+    return str(randint(0, 999)).zfill(3)
+
+def gender_number():
+    return randint(0, 9)
+
+def checksum_number(year_number, month_number, day_number, serial_number, gender_number):
+    return 9
 
 year = get_year()
 month = get_month()
 day = get_day()
 
+
 year_number = year_number(year)
 month_number = month_number(year, month)
 day_number = day_number(day)
+serial_number = serial_number()
+gender_number = gender_number()
+checksum_number = checksum_number(year_number, month_number, day_number, serial_number, gender_number)
 
-print year_number
-print month_number
-print day
+PESEL = str(year_number) + str(month_number) + str(day_number) + str(serial_number) + str(gender_number) + str(checksum_number)
+
+print PESEL
 
 print("Rok: " + str(year) + " Miesiac: " + str(month) + " Dzien: " + str(day))
-
-print ("Numer PESEl: " + str(year_number) + str(month_number) + str(day_number))
